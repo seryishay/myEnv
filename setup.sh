@@ -19,5 +19,5 @@ cp ./.tmux.conf ~/.tmux.conf
 
 # Make bash prompt nicer
 echo Changing bash prompt to be pretier 
-echo "export PS1='\[\e[35m\u\] \[\e[36m\w\] \[\e[33m\]\[\e[1m\]$ \[\e[0m\]'" >> ~/.bashrc
+echo "PS1='\[\e[35m\u\] \[\e[36m\w\] \[\e[33m\]\[\e[1m\]$ \[\e[0m\]'" >> ~/.bashrc
 source ~/.bashrc
