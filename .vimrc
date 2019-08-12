@@ -31,14 +31,17 @@ Plugin 'vim-airline/vim-airline-themes'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+if $VIMPLUGINSINSTALLED == 'false'
+    echo Installation
+else
+    " set colorscheme
+    colorscheme gruvbox
+    set background=dark
 
-" set colorscheme
-colorscheme gruvbox
-set background=dark
+    " open NERDTree automatically when vim starts up if no files were specified
+    autocmd StdinReadPre * let s:std_in=1
+    autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-" open NERDTree automatically when vim starts up if no files were specified
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
-" air-line
-" let g:airline_powerline_fonts = 1
+    " air-line
+    " let g:airline_powerline_fonts = 1
+endif
