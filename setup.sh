@@ -14,6 +14,11 @@ export VIMPLUGINSINSTALLED='false'
 vi -c ':PluginInstall' -c 'qa!'
 VIMPLUGINSINSTALLED=
 
+# Install YouCompleteMe - Code Completion for vi
+sudo apt install build-essential cmake python3-dev
+cd ~/.vim/bundle/YouCompleteMe
+python3 install.py --all
+
 # Copy tmux configuration
 echo Copying .tmux.conf - tmux configuration 
 cp ./.tmux.conf ~/.tmux.conf
