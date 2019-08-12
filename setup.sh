@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 # Install Vundle
 echo Installing Vundle - vim package manager
