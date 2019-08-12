@@ -11,6 +11,7 @@ cp ./.vimrc ~/.vimrc
 echo Installing vim packages
 export VIMPLUGINSINSTALLED='false'
 vi -c ':PluginInstall' -c 'qa!'
+export VIMPLUGINSINSTALLED='true'
 
 # Copy tmux configuration
 echo Copying .tmux.conf - tmux configuration 
