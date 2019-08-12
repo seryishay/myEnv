@@ -5,15 +5,12 @@ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # Copy vim configuration
 echo copying .vimrc - vim configuration
-set +e
 cp ./.vimrc ~/.vimrc
-set -e
 
 # Install configuration
-echo Installing vim packages 
+echo Installing vim packages
+export VIMPLUGINSINSTALLED='false'
 vi -c ':PluginInstall' -c 'qa!'
-
-
 
 # Copy tmux configuration
 echo Copying .tmux.conf - tmux configuration 
