@@ -32,7 +32,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 if $VIMPLUGINSINSTALLED == 'false'
-    echo Installation
+    "Initial"
 else
     " set colorscheme
     colorscheme gruvbox
@@ -43,5 +43,5 @@ else
     autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
     " air-line
-    " let g:airline_powerline_fonts = 1
+    let g:airline_powerline_fonts = 1
 endif
