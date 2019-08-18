@@ -2,6 +2,8 @@ set nocompatible              " required
 filetype off                  " required
 
 set number
+set encoding=utf-8
+set fileencoding=utf-8
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -43,5 +45,5 @@ else
     autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
     " air-line
-    " let g:airline_powerline_fonts = 1
+    let g:airline_powerline_fonts = 1
 endif
