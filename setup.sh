@@ -10,20 +10,8 @@ cp ./.vimrc ~/.vimrc
 
 # Install configuration
 echo Installing vim packages
-export VIMPLUGINSINSTALLED='false'
 vi -c ':PluginInstall' -c 'qa!'
-VIMPLUGINSINSTALLED=
-
-# Install YouCompleteMe - Code Completion for vi
-sudo apt install build-essential cmake python3-dev
-cd ~/.vim/bundle/YouCompleteMe
-python3 install.py --all
 
 # Copy tmux configuration
 echo Copying .tmux.conf - tmux configuration 
 cp ./.tmux.conf ~/.tmux.conf
-
-# Make bash prompt nicer
-echo Changing bash prompt to be pretier 
-echo "PS1='\[\e[35m\u\] \[\e[36m\w\] \[\e[33m\]\[\e[1m\]$ \[\e[0m\]'" >> ~/.bashrc
-. ~/.bashrc
